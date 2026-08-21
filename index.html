@@ -4,941 +4,702 @@
   <meta charset="UTF-8">
   <title>SPE Student Chapter at Texas A&M University | Society of Plastics Engineers TAMU</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
   <meta name="description" content="Society of Plastics Engineers (SPE) Student Chapter at Texas A&M University. Join us for networking, technical talks, industry exposure, and professional development in polymers and plastics engineering.">
   <meta name="keywords" content="SPE, Society of Plastics Engineers, Texas A&M, TAMU, student chapter, polymers, plastics engineering, materials science, student organization, networking, professional development">
   <meta name="author" content="SPE Student Chapter - Texas A&M University">
   <meta name="robots" content="index, follow">
-  
+
   <!-- Open Graph / Social Media Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="SPE Student Chapter - Texas A&M University">
   <meta property="og:description" content="Society of Plastics Engineers Student Chapter at TAMU. Advancing careers in polymers and plastics through education, networking, and professional development.">
   <meta property="og:url" content="https://kstam21.github.io/spetamu/">
   <meta property="og:site_name" content="SPE TAMU">
-  
+
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="SPE Student Chapter - Texas A&M">
   <meta name="twitter:description" content="Join the Society of Plastics Engineers at Texas A&M University for networking and professional development.">
-  
+
   <!-- Geo Tags -->
   <meta name="geo.region" content="US-TX">
   <meta name="geo.placename" content="College Station">
   <meta name="geo.position" content="30.6280;-96.3344">
   <meta name="ICBM" content="30.6280, -96.3344">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap');
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      /* Texas A&M Maroon Color Palette */
-      --primary-maroon: #500000;
-      --dark-maroon: #3C0000;
-      --light-maroon: #800020;
-      --accent-gold: #FFC72C;
-      --accent-cream: #F5E6D3;
-      --sage-green: #87A96B;
-      --warm-gray: #8B8680;
-      --text-dark: #2D2926;
-      --bg-cream: #FFF8F3;
-      --rose-gold: #E8B4B8;
-      --dusty-blue: #A8C2E0;
+      /* Brand scale - Texas A&M Maroon */
+      --brand-50:  #f7ecec;
+      --brand-100: #ecd3d3;
+      --brand-200: #d29a9a;
+      --brand-300: #b16060;
+      --brand-400: #7a2222;
+      --brand-500: #500000;
+      --brand-600: #3c0000;
+      --brand-700: #2b0000;
+      --brand-900: #1a0000;
+
+      /* Accent gold */
+      --gold-400: #ffd65c;
+      --gold-500: #ffc72c;
+      --gold-600: #e6ac00;
+
+      /* Neutral ink scale */
+      --ink-50:  #f7f8fa;
+      --ink-100: #eef0f3;
+      --ink-200: #e2e5ea;
+      --ink-300: #cbd0d8;
+      --ink-400: #9aa1ac;
+      --ink-500: #6b7280;
+      --ink-600: #4b5563;
+      --ink-700: #374151;
+      --ink-800: #26303d;
+      --ink-900: #131a24;
     }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Work Sans', sans-serif;
-      color: var(--text-dark);
-      background: linear-gradient(135deg, var(--bg-cream) 0%, var(--accent-cream) 50%, #FFF5F0 100%);
-      min-height: 100vh;
-      overflow-x: hidden;
-      position: relative;
+      font-family: 'Open Sans', sans-serif;
+      color: var(--ink-600);
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Animated Background Shapes */
-    .floating-shapes {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
 
-    .shape {
-      position: absolute;
-      opacity: 0.08;
-      animation: float 20s infinite ease-in-out;
-    }
-
-    .shape-1 {
-      width: 200px;
-      height: 200px;
-      background: radial-gradient(circle, var(--light-maroon), transparent);
-      border-radius: 50%;
-      top: 10%;
-      left: 10%;
-      animation-duration: 25s;
-    }
-
-    .shape-2 {
-      width: 150px;
-      height: 150px;
-      background: linear-gradient(45deg, var(--accent-gold), transparent);
-      transform: rotate(45deg);
-      top: 60%;
-      right: 15%;
-      animation-duration: 30s;
-      animation-delay: -5s;
-    }
-
-    .shape-3 {
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(ellipse, var(--rose-gold), transparent);
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-      bottom: 10%;
-      left: 50%;
-      animation-duration: 35s;
-      animation-delay: -10s;
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0) rotate(0deg) scale(1);
-      }
-      33% {
-        transform: translateY(-30px) rotate(120deg) scale(1.1);
-      }
-      66% {
-        transform: translateY(30px) rotate(240deg) scale(0.95);
-      }
-    }
-
-    /* Header with Maroon Gradient Design */
-    header {
-      background: linear-gradient(135deg, var(--primary-maroon) 0%, var(--light-maroon) 50%, var(--dark-maroon) 100%);
-      color: white;
-      padding: 3rem 1rem 4rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(80,0,0,0.3);
-      transform-style: preserve-3d;
-    }
-
-    header::before {
-      content: '🎓';
-      position: absolute;
-      font-size: 200px;
-      opacity: 0.05;
-      top: -50px;
-      left: -50px;
-      animation: rotate 20s linear infinite;
-    }
-
-    header::after {
-      content: '⚗️';
-      position: absolute;
-      font-size: 150px;
-      opacity: 0.05;
-      bottom: -30px;
-      right: -30px;
-      animation: rotate 25s linear infinite reverse;
-    }
-
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .header-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .logo-container {
-      margin-bottom: 1.5rem;
-      animation: bounceIn 1s ease;
-    }
-
-    @keyframes bounceIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.3);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    .spe-logo {
-      width: 150px;
-      height: auto;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-      transition: transform 0.3s ease;
-    }
-
-    .spe-logo:hover {
-      transform: scale(1.1) rotate(5deg);
-    }
-
-    h1 {
-      font-family: 'Fredoka', cursive;
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
-      animation: slideInDown 1s ease;
-    }
-
-    @keyframes slideInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .subtitle {
-      font-size: 1.3rem;
-      background: rgba(255,255,255,0.15);
-      padding: 0.5rem 1.5rem;
-      border-radius: 50px;
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      backdrop-filter: blur(10px);
-      animation: fadeIn 1.5s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .intro-text {
-      font-size: 1.1rem;
-      max-width: 800px;
+    .container {
+      max-width: 1152px;
       margin: 0 auto;
-      line-height: 1.8;
-      padding: 0 1rem;
-      opacity: 0.95;
-      animation: slideInUp 1.5s ease;
+      padding: 0 1.25rem;
     }
 
-    @keyframes slideInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 0.95;
-        transform: translateY(0);
-      }
-    }
-
-    /* Main Section */
-    section {
-      position: relative;
-      z-index: 1;
-      max-width: 1200px;
-      margin: -2rem auto 0;
-      padding: 0 1rem 3rem;
-    }
-
-    .content-card {
-      background: white;
-      border-radius: 30px;
-      padding: 2.5rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 15px 40px rgba(80,0,0,0.12);
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .content-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 50px rgba(80,0,0,0.18);
-    }
-
-    .content-card::before {
-      content: '';
+    .skip-link {
       position: absolute;
+      left: -9999px;
       top: 0;
-      left: 0;
-      right: 0;
-      height: 6px;
-      background: linear-gradient(90deg, var(--primary-maroon), var(--accent-gold), var(--sage-green), var(--rose-gold));
-      background-size: 200% 100%;
-      animation: gradientShift 3s ease infinite;
-    }
-
-    @keyframes gradientShift {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-
-    h2 {
-      font-family: 'Fredoka', cursive;
-      color: var(--primary-maroon);
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .icon {
-      font-size: 2rem;
-    }
-
-    /* Tag Styling */
-    .tag-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .tag {
-      background: linear-gradient(135deg, var(--primary-maroon), var(--light-maroon));
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 50px;
+      background: var(--brand-500);
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
       font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(80,0,0,0.2);
+      z-index: 100;
     }
+    .skip-link:focus { left: 1rem; top: 1rem; }
 
-    .tag:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 8px 20px rgba(80,0,0,0.3);
-    }
-
-    .tag.gold {
-      background: linear-gradient(135deg, var(--accent-gold), #FFD700);
-      color: var(--text-dark);
-    }
-
-    .tag.sage {
-      background: linear-gradient(135deg, var(--sage-green), #9DB87F);
-    }
-
-    .tag.rose {
-      background: linear-gradient(135deg, var(--rose-gold), #F5CAD1);
-      color: var(--text-dark);
-    }
-
-    /* NEW BADGE */
-    .new-badge {
-      background: linear-gradient(135deg, #FF6B6B, #FF8E53);
-      color: white;
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      margin-left: 0.5rem;
-      vertical-align: middle;
-      animation: pulse 2s ease infinite;
-      box-shadow: 0 3px 10px rgba(255,107,107,0.4);
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 3px 10px rgba(255,107,107,0.4);
-      }
-      50% {
-        transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(255,107,107,0.6);
-      }
-    }
-
-    /* Events Section */
-    .events-container {
-      margin-top: 2rem;
-    }
-
-    .event-card {
-      background: linear-gradient(135deg, #FFF9F5 0%, #FFF5F0 100%);
-      border-left: 5px solid var(--primary-maroon);
-      border-radius: 20px;
-      padding: 2rem;
-      margin-bottom: 1.5rem;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .event-card::before {
-      content: '🎉';
-      position: absolute;
-      font-size: 80px;
-      opacity: 0.05;
-      right: 20px;
-      top: 20px;
-    }
-
-    .event-card.featured {
-      border-left-width: 8px;
-      box-shadow: 0 10px 30px rgba(80,0,0,0.15);
-    }
-
-    .event-card:hover {
-      transform: translateX(10px);
-      box-shadow: 0 15px 40px rgba(80,0,0,0.2);
-    }
-
-    .event-date {
-      display: inline-block;
-      background: var(--primary-maroon);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 30px;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .event-title {
-      font-family: 'Fredoka', cursive;
-      font-size: 1.5rem;
-      color: var(--primary-maroon);
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-    }
-
-    .event-location {
-      color: var(--warm-gray);
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-
-    .event-description {
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-
-    .event-link {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--primary-maroon), var(--light-maroon));
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(80,0,0,0.2);
-    }
-
-    .event-link:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(80,0,0,0.3);
-    }
-
-    /* Registration CTA */
-    .registration-cta {
-      background: linear-gradient(135deg, var(--accent-gold) 0%, #FFD700 100%);
-      border-radius: 30px;
-      padding: 3rem 2rem;
-      text-align: center;
-      margin-bottom: 2rem;
-      box-shadow: 0 15px 40px rgba(255,199,44,0.3);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .registration-cta::before {
-      content: '✨';
-      position: absolute;
-      font-size: 100px;
-      opacity: 0.1;
-      top: -20px;
-      left: -20px;
-      animation: rotate 10s linear infinite;
-    }
-
-    .registration-cta::after {
-      content: '🎯';
-      position: absolute;
-      font-size: 100px;
-      opacity: 0.1;
-      bottom: -20px;
-      right: -20px;
-      animation: rotate 15s linear infinite reverse;
-    }
-
-    .registration-cta h3 {
-      font-family: 'Fredoka', cursive;
-      font-size: 2rem;
-      color: var(--primary-maroon);
-      margin-bottom: 1rem;
-    }
-
-    .registration-cta p {
-      font-size: 1.2rem;
-      color: var(--text-dark);
-      margin-bottom: 2rem;
-    }
-
-    .register-btn {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--primary-maroon), var(--light-maroon));
-      color: white;
-      padding: 1.2rem 3rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 30px rgba(80,0,0,0.3);
-      position: relative;
-      z-index: 1;
-    }
-
-    .register-btn:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 15px 40px rgba(80,0,0,0.4);
-    }
-
-    /* Leadership Section - With Photo Support */
-    .leadership-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .member-card {
-      background: linear-gradient(135deg, #FFF9F5 0%, #FFF5F0 100%);
-      border-radius: 25px;
-      padding: 2rem;
-      text-align: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(80,0,0,0.1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .member-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 5px;
-      background: linear-gradient(90deg, var(--primary-maroon), var(--accent-gold));
-    }
-
-    .member-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(80,0,0,0.2);
-    }
-
-    .profile-photo {
-      width: 150px;
-      height: 150px;
-      margin: 0 auto 1.5rem;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(80,0,0,0.2);
-      transition: all 0.3s ease;
-      background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .profile-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .profile-photo .no-photo {
-      font-size: 3rem;
-      color: #999;
-    }
-
-    .role-badge {
-      background: linear-gradient(135deg, var(--primary-maroon), var(--light-maroon));
-      color: white;
-      padding: 0.5rem 1.2rem;
-      border-radius: 30px;
-      font-weight: 600;
-      display: inline-block;
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .member-name {
-      font-family: 'Fredoka', cursive;
-      font-size: 1.3rem;
-      color: var(--primary-maroon);
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-
-    .department {
-      color: var(--warm-gray);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    .member-email {
-      margin-top: 0.8rem;
-    }
-
-    .member-email a {
-      color: var(--text-dark);
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.3s ease;
-    }
-
-    .member-email a:hover {
-      color: var(--primary-maroon);
-      text-decoration: underline;
-    }
-
-    .faculty-card {
-      background: linear-gradient(135deg, #FFF5EB 0%, #FFE8D6 100%);
-      border-top: 5px solid var(--accent-gold);
-    }
-
-    .faculty-card .member-email {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Contact Section */
-    .contact-section {
-      text-align: center;
-    }
-
-    .contact-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-
-    .contact-btn {
+    /* Buttons */
+    .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 1.2rem 2.5rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-
-    .contact-btn.primary {
-      background: linear-gradient(135deg, var(--primary-maroon), var(--light-maroon));
-      color: white;
-    }
-
-    .contact-btn:not(.primary) {
-      background: white;
-      color: var(--primary-maroon);
-      border: 3px solid var(--primary-maroon);
-    }
-
-    .contact-btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(80,0,0,0.2);
-    }
-
-    /* Footer */
-    footer {
-      background: linear-gradient(135deg, var(--primary-maroon), var(--dark-maroon));
-      color: white;
-      text-align: center;
-      padding: 3rem 1rem;
-      margin-top: 4rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    footer::before {
-      content: '🌟';
-      position: absolute;
-      font-size: 150px;
-      opacity: 0.03;
-      top: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .footer-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .social-links {
-      display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
+      gap: 0.4rem;
+      border-radius: 999px;
+      padding: 0.7rem 1.5rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary { background: var(--brand-500); color: #fff; box-shadow: 0 8px 20px rgba(80,0,0,0.25); }
+    .btn-primary:hover { background: var(--brand-600); }
+
+    .btn-gold { background: var(--gold-500); color: var(--brand-700); box-shadow: 0 8px 20px rgba(255,199,44,0.35); }
+    .btn-gold:hover { background: var(--gold-400); }
+
+    .btn-outline-white { border-color: rgba(255,255,255,0.5); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+    .btn-outline-brand { border-color: var(--brand-500); color: var(--brand-500); background: #fff; }
+    .btn-outline-brand:hover { background: var(--brand-50); }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--ink-100);
     }
 
-    .social-link {
-      width: 50px;
-      height: 50px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50%;
+    .nav-container {
+      max-width: 1152px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
       text-decoration: none;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
+      flex-shrink: 0;
+    }
+    .brand-logo { height: 40px; width: auto; }
+    .brand-text { font-weight: 700; font-size: 0.85rem; line-height: 1.2; color: var(--ink-800); }
+    .brand-text small { display: block; font-weight: 500; font-size: 0.75rem; color: var(--ink-500); }
+
+    .nav-toggle {
+      display: none;
+      margin-left: auto;
+      background: none;
+      border: 1px solid var(--ink-200);
+      border-radius: 6px;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+      color: var(--ink-600);
+      cursor: pointer;
     }
 
-    .social-link:hover {
-      background: rgba(255,255,255,0.2);
-      transform: translateY(-5px) rotate(10deg);
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-left: 1.5rem;
+    }
+    .nav-links a {
+      display: block;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--ink-600);
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--brand-500); }
+
+    .nav-cta { margin-left: auto; flex-shrink: 0; padding: 0.6rem 1.25rem; font-size: 0.85rem; }
+
+    @media (max-width: 860px) {
+      .nav-toggle { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        left: 0; right: 0; top: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.15rem;
+        background: #fff;
+        border-bottom: 1px solid var(--ink-100);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        padding: 0.75rem 1.25rem;
+        margin-left: 0;
+      }
+      .nav-links.open { display: flex; }
+      .nav-container { position: relative; flex-wrap: wrap; }
+      .nav-cta { order: 3; margin-left: 0; }
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.5rem;
-      }
+    /* Hero */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--brand-500) 0%, var(--brand-700) 60%, var(--brand-900) 100%);
+      color: #fff;
+      overflow: hidden;
+      padding: 5rem 0 6rem;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 15% 20%, rgba(255,199,44,0.12), transparent 40%),
+                         radial-gradient(circle at 85% 80%, rgba(255,255,255,0.08), transparent 45%);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; max-width: 720px; }
+    .eyebrow {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold-500);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-top: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    .hero .subtitle {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      color: rgba(255,255,255,0.92);
+    }
+    .hero .desc {
+      margin-top: 1rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.8);
+      max-width: 620px;
+    }
+    .hero-actions {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
 
-      .subtitle {
-        font-size: 1rem;
-      }
+    /* Sections */
+    section.block { padding: 4.5rem 0; }
+    section.block.alt { background: var(--ink-50); border-top: 1px solid var(--ink-100); border-bottom: 1px solid var(--ink-100); }
 
-      .content-card {
-        padding: 1.5rem;
-      }
+    .section-head { max-width: 640px; margin-bottom: 2.5rem; }
+    .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+    .section-head h2 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: var(--ink-900);
+      margin-top: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+    .section-head p { margin-top: 0.75rem; color: var(--ink-500); font-size: 1.05rem; line-height: 1.7; }
 
-      h2 {
-        font-size: 1.5rem;
-      }
+    /* Pillars grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+    .pillar-card {
+      border: 1px solid var(--ink-100);
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.75rem;
+      transition: all 0.25s ease;
+    }
+    .pillar-card:hover { transform: translateY(-4px); border-color: var(--brand-200); box-shadow: 0 10px 25px rgba(80,0,0,0.08); }
+    .pillar-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink-900); }
+    .pillar-card p { margin-top: 0.5rem; font-size: 0.95rem; line-height: 1.65; color: var(--ink-500); }
 
-      .leadership-grid {
-        grid-template-columns: 1fr;
-      }
+    /* Team grid */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+    .member-card {
+      border: 1px solid var(--ink-100);
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.75rem;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+    .member-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(80,0,0,0.1); }
+    .member-card.faculty { background: var(--ink-50); }
+    .profile-photo {
+      width: 128px; height: 128px;
+      margin: 0 auto 1.25rem;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--ink-100);
+    }
+    .profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .role-badge {
+      display: inline-block;
+      background: var(--brand-50);
+      color: var(--brand-500);
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+    .member-name { font-size: 1.1rem; font-weight: 700; color: var(--ink-900); }
+    .member-dept { font-size: 0.85rem; color: var(--ink-500); margin-top: 0.2rem; }
+    .member-email { margin-top: 0.75rem; font-size: 0.9rem; }
+    .member-email a { color: var(--ink-600); text-decoration: none; }
+    .member-email a:hover { color: var(--brand-500); text-decoration: underline; }
+    .member-extra { margin-top: 1rem; font-size: 0.85rem; color: var(--ink-500); line-height: 1.6; text-align: left; }
+    .member-extra a { color: var(--brand-500); text-decoration: none; }
+    .member-extra a:hover { text-decoration: underline; }
 
-      .registration-cta {
-        padding: 2rem 1rem;
-      }
+    /* Events - compact list style */
+    .events-list { display: flex; flex-direction: column; gap: 1rem; }
 
-      .registration-cta h3 {
-        font-size: 1.5rem;
-      }
+    .event-row {
+      display: flex;
+      gap: 1.25rem;
+      border: 1px solid var(--ink-100);
+      border-radius: 16px;
+      padding: 1.25rem;
+      background: #fff;
+      transition: all 0.25s ease;
+    }
+    .event-row:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(80,0,0,0.08); }
+    .event-row.past { background: var(--ink-50); }
 
-      .spe-logo {
-        width: 120px;
-      }
+    .event-date-box {
+      flex-shrink: 0;
+      width: 64px; height: 64px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid var(--ink-100);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .event-row.upcoming .event-date-box { background: var(--brand-50); border-color: var(--brand-100); }
+    .event-date-box .mon {
+      font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--ink-400);
+    }
+    .event-row.upcoming .event-date-box .mon { color: var(--brand-500); }
+    .event-date-box .day { font-size: 1.25rem; font-weight: 800; line-height: 1.2; color: var(--ink-900); }
+    .event-row.upcoming .event-date-box .day { color: var(--brand-500); }
+
+    .event-body { min-width: 0; flex: 1; }
+    .event-meta-line {
+      display: flex; flex-wrap: wrap; gap: 0.3rem;
+      font-size: 0.8rem; color: var(--ink-400);
+    }
+    .event-row h3 { margin-top: 0.35rem; font-size: 1.15rem; font-weight: 700; color: var(--ink-900); }
+    .event-row p { margin-top: 0.5rem; font-size: 0.95rem; line-height: 1.7; color: var(--ink-500); }
+
+    .photo-placeholder {
+      margin-top: 0.9rem;
+      max-width: 320px;
+      border: 2px dashed var(--ink-200);
+      border-radius: 12px;
+      padding: 1.75rem 1rem;
+      text-align: center;
+      color: var(--ink-400);
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: var(--ink-50);
+    }
+    .event-row.past .photo-placeholder { background: #fff; }
+
+    .event-link-sm {
+      margin-top: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--brand-500);
+      text-decoration: none;
+    }
+    .event-link-sm:hover { color: var(--brand-600); text-decoration: underline; }
+
+    /* CTA band */
+    .cta-band {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+      background: #fff;
+      border: 1px solid var(--ink-100);
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      box-shadow: 0 10px 30px rgba(80,0,0,0.06);
+    }
+    .cta-band h2 { font-size: 1.8rem; font-weight: 800; color: var(--ink-900); }
+    .cta-band p { margin-top: 0.75rem; color: var(--ink-500); font-size: 1.05rem; }
+    .cta-band .hero-actions { justify-content: center; margin-top: 1.75rem; }
+
+    /* Footer */
+    footer { background: var(--ink-900); color: rgba(255,255,255,0.7); }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2.5rem;
+      padding: 3.5rem 0 2.5rem;
+    }
+    @media (max-width: 700px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    .footer-brand { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
+    .footer-brand img { height: 36px; }
+    .footer-brand span { color: #fff; font-weight: 700; font-size: 0.95rem; }
+    .footer-col h3 {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.9rem;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+    .footer-col a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 1.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero .subtitle { font-size: 1.1rem; }
+      section.block { padding: 3rem 0; }
+      .cta-band { padding: 2.25rem 1.25rem; }
+      .event-row { flex-direction: column; }
+      .event-date-box { width: 56px; height: 56px; }
     }
   </style>
 </head>
 <body>
-  <!-- Animated Background -->
-  <div class="floating-shapes">
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
-  </div>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <header>
-    <div class="header-content">
-      <h1>SPE Student Chapter</h1>
-      
-      <!-- SPE Logo -->
-      <div class="logo-container">
-        <img src="square-notext.png" alt="SPE Logo" class="spe-logo">
-      </div>
-      
-      <div class="subtitle">Texas A&M University</div>
-      <p class="intro-text">
-        Welcome to the Society of Plastics Engineers Student Chapter at Texas A&M! 
-        We're passionate about advancing the world of plastics and polymers through 
-        education, innovation, and community.
-      </p>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <img src="square-notext.png" alt="SPE TAMU logo" class="brand-logo">
+        <span class="brand-text">SPE Student Chapter<small>Texas A&amp;M University</small></span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">&#9776;</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#get-involved">Get Involved</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://www.4spe.org/i4a/pages/index.cfm?pageID=3596" target="_blank" class="btn btn-gold nav-cta">Join for Free</a>
     </div>
   </header>
 
-  <section>
-    <!-- Registration CTA Section -->
-    <div class="registration-cta">
-      <h3>🚀 Join SPE for FREE!</h3>
-      <p>Students can register at no cost and unlock amazing opportunities!</p>
-      <a href="https://www.4spe.org/i4a/pages/index.cfm?pageID=3596" target="_blank" class="register-btn">
-        <span>✨</span> Register Now <span>→</span>
-      </a>
-    </div>
-
-    <div class="content-card">
-      <h2><span class="icon">🌟</span> About SPE</h2>
-      <p style="font-size: 1.1rem; line-height: 1.8;">
-        The Society of Plastics Engineers (SPE) is your gateway to the exciting world of polymers and plastics! 
-        We're a global community connecting passionate students and professionals through cutting-edge education, 
-        groundbreaking research, and amazing networking opportunities. 
-      </p>
-      <div class="tag-container">
-        <span class="tag">🔬 Innovation</span>
-        <span class="tag gold">🤝 Networking</span>
-        <span class="tag sage">📚 Learning</span>
-        <span class="tag rose">🚀 Career Growth</span>
-      </div>
-    </div>
-
-    <div class="content-card">
-      <h2><span class="icon">🎯</span> Our Mission</h2>
-      <p style="font-size: 1.1rem; line-height: 1.8;">
-        We're here to supercharge your journey in polymers and plastics! Through engaging technical talks, 
-        hands-on industry exposure, professional development workshops, and incredible networking events, 
-        we bridge the gap between classroom learning and real-world applications. Join us to transform 
-        your passion into expertise!
-      </p>
-    </div>
-
-    <!-- Upcoming Events Section -->
-    <div class="content-card">
-      <h2><span class="icon">📅</span> Upcoming Events <span class="new-badge">NEW</span></h2>
-      
-      <div class="events-container">
-        <div class="event-card featured">
-          <div class="event-date">📍 February 2026</div>
-          <div class="event-title">International Polyolefins Conference</div>
-          <div class="event-location">
-            <span>🌊</span> Galveston, Texas
-          </div>
-          <p class="event-description">
-            Don't miss this premier conference bringing together industry leaders, researchers, and students 
-            in the polyolefins field! Network with professionals, attend cutting-edge technical sessions, 
-            and explore career opportunities.
-          </p>
-          <a href="https://spe-stx.org/international-polyolefins-conference-3/" target="_blank" class="event-link">
-            <span>🎫</span> Learn More & Register
-          </a>
-        </div>
-
-        <p style="margin-top: 2rem; text-align: center; font-style: italic; color: #666;">
-          📧 Check your email and follow our social media for event updates and registration links!
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Texas A&amp;M University</p>
+        <h1>SPE Student Chapter</h1>
+        <p class="subtitle">Advancing careers in polymers and plastics engineering.</p>
+        <p class="desc">
+          We're the Society of Plastics Engineers Student Chapter at Texas A&amp;M — connecting students
+          with industry professionals through technical talks, plant tours, and hands-on projects, while
+          building the professional skills that turn a passion for polymers into a career.
         </p>
+        <div class="hero-actions">
+          <a href="https://www.4spe.org/i4a/pages/index.cfm?pageID=3596" target="_blank" class="btn btn-gold">Join SPE for Free</a>
+          <a href="#team" class="btn btn-outline-white">Meet the Team</a>
+          <a href="#events" class="btn btn-outline-white">Upcoming Events</a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="content-card">
-      <h2><span class="icon">👥</span> Meet Our Team!</h2>
-
-      <div class="leadership-grid">
-        <div class="member-card">
-          <div class="profile-photo">
-            <img src="president.jpg" alt="Konstantinos Stamatis">
-          </div>
-          <div class="role-badge">President</div>
-          <div class="member-name">Konstantinos Stamatis</div>
-          <div class="member-email"><a href="/cdn-cgi/l/email-protection#94f9e7f0fdf9d4e0f5f9e1baf1f0e1"><span class="__cf_email__" data-cfemail="d1bca2b5b8bc91a5b0bca4ffb4b5a4">[email&#160;protected]</span></a></div>
-        </div>
-
-        <div class="member-card">
-          <div class="profile-photo">
-            <img src="vp.jpg" alt="Suzanne Peterson">
-          </div>
-          <div class="role-badge">VP of Engineering</div>
-          <div class="member-name">Suzanne Peterson</div>
-          <div class="department">Materials Science & Engineering</div>
-          <div class="member-email"><a href="/cdn-cgi/l/email-protection#96e5e4e6e2e4e5f8a4d6e2f7fbe3b8f3f2e3"><span class="__cf_email__" data-cfemail="0f7c7d7f7b7d7c613d4f7b6e627a216a6b7a">[email&#160;protected]</span></a></div>
-        </div>
-
-        <div class="member-card">
-          <div class="profile-photo">
-            <img src="treasurer.jpg" alt="Chandeni Kassen">
-          </div>
-          <div class="role-badge">Treasurer</div>
-          <div class="member-name">Chandeni Kassen</div>
-          <div class="department">Chemistry</div>
-          <div class="member-email"><a href="/cdn-cgi/l/email-protection#d7b4a5bce5e497a3b6baa2f9b2b3a2"><span class="__cf_email__" data-cfemail="afccddc49d9cefdbcec2da81cacbda">[email&#160;protected]</span></a></div>
-        </div>
-
-        <div class="member-card">
-          <div class="profile-photo">
-            <img src="secretary.jpg" alt="Kayla Ainsworth">
-          </div>
-          <div class="role-badge">Secretary</div>
-          <div class="member-name">Kayla Ainsworth</div>
-          <div class="department">Materials Science & Engineering</div>
-          <div class="member-email"><a href="/cdn-cgi/l/email-protection#6209031b0e031007030c0c072216030f174c070617"><span class="__cf_email__" data-cfemail="d6bdb7afbab7a4b3b7b8b8b396a2b7bba3f8b3b2a3">[email&#160;protected]</span></a></div>
-        </div>
-
-        <div class="member-card faculty-card">
-          <div class="profile-photo">
-            <img src="advisor.jpg" alt="Dr. Michael Dimitriyev">
-          </div>
-          <div class="role-badge">Faculty Advisor</div>
-          <div class="member-name">Dr. Michael Dimitriyev</div>
-          <div class="department">Assistant Professor<br>Materials Science & Engineering</div>
-          <div class="member-email"><a href="/cdn-cgi/l/email-protection#7f120c1b16123f0b1e120a511a1b0a"><span class="__cf_email__" data-cfemail="fc918f989591bc889d9189d2999889">[email&#160;protected]</span></a></div>
-          <p style="margin-top: 1rem; font-size: 0.9rem;">
-            📍 Office: RDMC 236<br>
-            📞 Phone: <a href="tel:979-458-9134" style="color: var(--primary-maroon);">979-458-9134</a><br>
-            🌐 <a href="https://dimitriyev.engr.tamu.edu/" target="_blank" style="color: var(--primary-maroon);">Research Website</a>
+    <!-- About / What We Do -->
+    <section class="block" id="about">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" style="color: var(--brand-500);">What We Do</p>
+          <h2>Your gateway to the world of polymers and plastics</h2>
+          <p>
+            The Society of Plastics Engineers (SPE) is a global community connecting passionate students
+            and professionals through cutting-edge education, groundbreaking research, and networking
+            opportunities — and our TAMU chapter brings that community to campus.
           </p>
         </div>
-      </div>
-    </div>
-
-    <div class="content-card">
-      <div class="contact-section">
-        <h2 style="justify-content: center;"><span class="icon">💬</span> Let's Connect!</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 2rem;">
-          Ready to join our vibrant community? Have questions? We'd love to hear from you!
-        </p>
-        <div class="contact-buttons">
-          <a href="/cdn-cgi/l/email-protection#dfb2acbbb6b29fabbeb2aaf1babbaa" class="contact-btn primary">
-            <span>📧</span> Email Us
-          </a>
-          <a href="https://www.4spe.org" target="_blank" class="contact-btn">
-            <span>🌐</span> Visit SPE Global
-          </a>
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <h3>Connect</h3>
+            <p>We link students with practicing plastics and polymer engineers through networking events, industry talks, and mentorship.</p>
+          </div>
+          <div class="pillar-card">
+            <h3>Learn</h3>
+            <p>Technical talks, workshops, and industry exposure bridge classroom learning with real-world plastics engineering practice.</p>
+          </div>
+          <div class="pillar-card">
+            <h3>Grow</h3>
+            <p>We build leadership, communication, and career-ready skills through chapter involvement and SPE's national resources.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="footer-content">
-      <p style="font-size: 1.2rem; margin-bottom: 1rem;">
-        <strong>SPE Student Chapter — Texas A&M University</strong>
-      </p>
-      <p>Affiliated with the Society of Plastics Engineers (SPE)</p>
-      <div class="social-links">
-        <a href="#" class="social-link">🔗</a>
-        <a href="#" class="social-link">📱</a>
-        <a href="#" class="social-link">📸</a>
+    <!-- Team -->
+    <section class="block alt" id="team">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" style="color: var(--brand-500);">Leadership</p>
+          <h2>Meet our team</h2>
+          <p>The students and faculty advisor leading the SPE chapter at Texas A&amp;M.</p>
+        </div>
+        <div class="team-grid">
+          <div class="member-card">
+            <div class="profile-photo"><img src="president.jpg" alt="Konstantinos Stamatis"></div>
+            <div class="role-badge">President</div>
+            <div class="member-name">Konstantinos Stamatis</div>
+            <div class="member-email"><a href="mailto:kstam@tamu.edu">kstam@tamu.edu</a></div>
+          </div>
+          <div class="member-card">
+            <div class="profile-photo"><img src="vp.jpg" alt="Suzanne Peterson"></div>
+            <div class="role-badge">VP of Engineering</div>
+            <div class="member-name">Suzanne Peterson</div>
+            <div class="member-dept">Materials Science &amp; Engineering</div>
+            <div class="member-email"><a href="mailto:srptrsn2@tamu.edu">srptrsn2@tamu.edu</a></div>
+          </div>
+          <div class="member-card">
+            <div class="profile-photo"><img src="treasurer.jpg" alt="Chandeni Kassen"></div>
+            <div class="role-badge">Treasurer</div>
+            <div class="member-name">Chandeni Kassen</div>
+            <div class="member-dept">Chemistry</div>
+            <div class="member-email"><a href="mailto:crk23@tamu.edu">crk23@tamu.edu</a></div>
+          </div>
+          <div class="member-card">
+            <div class="profile-photo"><img src="secretary.jpg" alt="Kayla Ainsworth"></div>
+            <div class="role-badge">Secretary</div>
+            <div class="member-name">Kayla Ainsworth</div>
+            <div class="member-dept">Materials Science &amp; Engineering</div>
+            <div class="member-email"><a href="mailto:kaylareanne@tamu.edu">kaylareanne@tamu.edu</a></div>
+          </div>
+          <div class="member-card faculty">
+            <div class="profile-photo"><img src="advisor.jpg" alt="Dr. Michael Dimitriyev"></div>
+            <div class="role-badge">Faculty Advisor</div>
+            <div class="member-name">Dr. Michael Dimitriyev</div>
+            <div class="member-dept">Assistant Professor, Materials Science &amp; Engineering</div>
+            <div class="member-email"><a href="mailto:msdim@tamu.edu">msdim@tamu.edu</a></div>
+            <div class="member-extra">
+              Office: RDMC 236<br>
+              Phone: <a href="tel:979-458-9134">979-458-9134</a><br>
+              <a href="https://dimitriyev.engr.tamu.edu/" target="_blank">Research website ↗</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <p style="margin-top: 2rem; opacity: 0.8;">© 2024 SPE TAMU</p>
+    </section>
+
+    <!-- Events -->
+    <section class="block" id="events">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" style="color: var(--brand-500);">Events</p>
+          <h2>Upcoming &amp; recent events</h2>
+          <p>Check your email and follow our social media for the latest event updates and registration links.</p>
+        </div>
+
+        <div class="events-list">
+          <div class="event-row upcoming">
+            <div class="event-date-box"><span class="mon">Feb</span><span class="day">2026</span></div>
+            <div class="event-body">
+              <div class="event-meta-line"><span>February 2026</span><span>· Galveston, TX</span></div>
+              <h3>International Polyolefins Conference</h3>
+              <p>
+                Don't miss this premier conference bringing together industry leaders, researchers, and
+                students in the polyolefins field! Network with professionals, attend cutting-edge technical
+                sessions, and explore career opportunities.
+              </p>
+              <a href="https://spe-stx.org/international-polyolefins-conference-3/" target="_blank" class="event-link-sm">Learn more &amp; register ↗</a>
+            </div>
+          </div>
+
+          <div class="event-row past">
+            <div class="event-date-box"><span class="mon">Aug</span><span class="day">18</span></div>
+            <div class="event-body">
+              <div class="event-meta-line"><span>Aug 18, 2026</span><span>· 5:15 PM</span><span>· Daikin Park (Union Station entrance), Houston, TX</span></div>
+              <h3>SPE-TAMU at SPE-STX Fall Kick-Off (Astros vs. Angels)</h3>
+              <p>
+                Our SPE Texas A&amp;M chapter joined SPE South Texas Section's Fall Kick-Off Event, cheering
+                on the Astros as they took on the Angels! The evening started at 5:15pm with a board
+                meeting/networking social in the Boardroom (Union Station entrance, behind the gates) — a
+                great chance to see what SPE-STX is all about.
+              </p>
+              <div class="photo-placeholder">📷 Event photo coming soon!</div>
+              <a href="https://spe-stx.org/" target="_blank" class="event-link-sm">View recap ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get Involved CTA -->
+    <section class="block alt" id="get-involved">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Want to get involved?</h2>
+          <p>Whether you're looking to attend an event, join a committee, or just say hello — we'd love to hear from you.</p>
+          <div class="hero-actions">
+            <a href="https://www.4spe.org/i4a/pages/index.cfm?pageID=3596" target="_blank" class="btn btn-primary">Join SPE for Free</a>
+            <a href="#contact" class="btn btn-outline-brand">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <a href="#" class="footer-brand">
+          <img src="square-notext.png" alt="SPE TAMU logo">
+          <span>SPE Student Chapter — Texas A&amp;M University</span>
+        </a>
+        <p style="max-width: 380px; font-size: 0.9rem; line-height: 1.7;">
+          Affiliated with the Society of Plastics Engineers (SPE), a global community advancing careers
+          in polymers and plastics through education, networking, and professional development.
+        </p>
+        <a href="https://www.4spe.org" target="_blank" style="display:inline-block; margin-top:1rem; color: var(--gold-500); font-weight:700; text-decoration:none; font-size:0.9rem;">Visit SPE Global ↗</a>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#get-involved">Get Involved</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="mailto:kstam@tamu.edu">kstam@tamu.edu</a></li>
+          <li><a href="#" target="_blank">LinkedIn ↗</a></li>
+          <li><a href="#" target="_blank">Instagram ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 SPE Student Chapter, Texas A&amp;M University.</p>
+      <p>Not officially affiliated with Texas A&amp;M University.</p>
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Add interactive hover effects to member cards
-    doc
+  <script>
+    var toggle = document.getElementById('nav-toggle');
+    var links = document.getElementById('nav-links');
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
